@@ -23,13 +23,14 @@ set wildignore+=*/min/*
 set wildignore+=tags,cscope.*
 set wildignore+=*.tar.*
 
-"filetype plugin on
+filetype plugin on
 "set omnifunc=syntaxcomplete#Complete
 
 call plug#begin('~/.vim/plugged')
 
 " Theme
 Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 " IDE
 Plug 'easymotion/vim-easymotion' " search in file
@@ -43,15 +44,36 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' } " autocompletation
 Plug 'jiangmiao/auto-pairs' " auto create paris for tags, brakets, etc
 Plug 'alvan/vim-closetag' " autocomplete tag pairs or tag combos
-Plug 'elixir-editors/vim-elixir' " Elixir plugin
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' } " Python
+Plug 'nvim-lualine/lualine.nvim' " don't know
+Plug 'neovim/nvim-lspconfig' " lenguage sever protocol
+Plug 'williamboman/nvim-lsp-installer' " language senver protocol
+
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
 
 " TS
 Plug 'leafgarland/typescript-vim'
 
+" Terraform
+Plug 'hashivim/vim-terraform'
+Plug 'vim-syntastic/syntastic'
+Plug 'juliosueiras/vim-terraform-completion'
+
 call plug#end()
 
-colorscheme gruvbox
+syntax on
+set t_Co=256
+set cursorline
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+"colorscheme gruvbox
 let g:gruvbox_contrast = "hard"
 let g:gruvbox_contrast_dark = "hard"
 let g:gruvbox_contrast_light = "hard"
@@ -60,15 +82,17 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \   'typescript': ['eslint'],
 \   'elixir': ['mix_format'],
+\   'go': ['gofmt'],
 \}
 
 let g:ale_linters = {
-\		'typescript': ['tsserver']
+\		'typescript': ['tsserver'],
+\   'go': ['gofmt'],
 \}
 
 let g:ale_fix_on_save = 1
-let g:ale_sign_error = '‚ùå'
-let g:ale_sign_warning = '‚ö†Ô∏è'
+let g:ale_sign_error = '‚úò'
+let g:ale_sign_warning = '‚ö†'
 
 let mapleader = " "
 
@@ -76,3 +100,23 @@ nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>t :NERDTreeFind<CR>
 nmap <Leader>f :Files<CR>
 nmap <Leader>fi :Rg<CR>
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+
+let NERDTreeShowHidden=1
+
+" elixir
+syntax on
+filetype plugin indent on
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+      
