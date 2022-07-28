@@ -58,4 +58,3 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/leoncordero/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
