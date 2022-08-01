@@ -69,8 +69,8 @@ export PATH=$PATH:$(go env GOPATH)/bin # macos
 #export CPPFLAGS="-I/usr/local/opt/node@16/include"
 
 # Flutter
-#export PATH="$PATH:/Users/leoncordero/flutter/flutter/bin"
+#export PATH="$PATH:"$HOME/flutter/flutter/bin"
 #export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-#export PATH="/Users/leoncordero/.rd/bin:$PATH"
+#export PATH=""$HOME/.rd/bin:$PATH"
