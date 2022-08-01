@@ -17,11 +17,6 @@ sudo apt update
 sudo apt install zsh
 ```
 
-```bash
-sudo apt update
-sudo apt install zsh-autosuggestions
-```
-
 ```bash 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
@@ -29,6 +24,18 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```bash
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 ```
+
+```bash
+sudo apt update
+sudo apt install zsh-autosuggestions
+```
+
+```bash
+sudo apt update
+sudo apt install zsh-syntax-highlighting
+```
+
+`NOTE: for the plugins it may be you need to clone the repositories intro the plugins folder in ~/.oh-my-zsh`
 
 Copy the file .zsh in this repository to ~/.zshrc
 
