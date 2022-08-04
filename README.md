@@ -35,6 +35,11 @@ sudo apt update
 sudo apt install zsh-syntax-highlighting
 ```
 
+for linux
+```bash
+chsh -s $(which zsh)
+```
+
 `NOTE: for the plugins it may be you need to clone the repositories intro the plugins folder in ~/.oh-my-zsh`
 
 Copy the file .zsh in this repository to ~/.zshrc
