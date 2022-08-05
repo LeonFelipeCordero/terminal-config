@@ -64,10 +64,9 @@ pip install flake8
 #### NodeJs
 Linux
 ```bash
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt install -y nodejs
-sudo apt install -y yarn
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
+install later the version using nvm
 
 #### Golang
 1. Download latest version https://go.dev/doc/install
@@ -77,8 +76,4 @@ sudo apt install -y yarn
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 ```
-Don't install node, accept other installations
-```bash
-cd ~/.local/share/lunarvim/lvim
-bash utils/installer/install_bin.sh
-```
+if not working add execulable in %HOME/.local/bin to PATH
