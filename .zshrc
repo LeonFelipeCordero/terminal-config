@@ -53,7 +53,7 @@ source $ZSH/oh-my-zsh.sh
 #export OPENBLAS="$(brew --prefix openblas)"
 
 # Golang
-export PATH=$PATH:$(go env GOPATH)/bin # macos
+#export PATH=$PATH:$(go env GOPATH)/bin # macos
 #export PATH=$PATH:/usr/local/go/bin # linux
 
 # Android
