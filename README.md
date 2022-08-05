@@ -70,7 +70,7 @@ install later the version using nvm
 
 #### Golang
 1. Download latest version https://go.dev/doc/install
-2. Enable go in .zshrc file2. Enable go in .zshrc file
+2. Enable go in .zshrc file.
 
 #### LunarVim
 ```bash
