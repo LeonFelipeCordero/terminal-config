@@ -72,6 +72,11 @@ install later the version using nvm
 1. Download latest version https://go.dev/doc/install
 2. Enable go in .zshrc file.
 
+### SDKMAN
+```bash
+curl -s "https://get.sdkman.io" | bash
+```
+
 #### LunarVim
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
