@@ -74,3 +74,6 @@ source $ZSH/oh-my-zsh.sh
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 #export PATH=""$HOME/.rd/bin:$PATH"
+
+# Rust
+#source "$HOME/.cargo/env"
