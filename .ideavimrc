@@ -1,0 +1,31 @@
+set visualbell
+set noerrorbells
+set scrolloff=5
+set incsearch
+set number relativenumber
+set idearefactormode=keep
+set ideajoin
+set surround
+set NERDTree
+
+let mapleader=" "
+
+nmap <leader>ru <Action>(Run)
+nmap <leader>de <Action>(Debug)
+nmap <leader>st <Action>(Stop)
+nmap <leader>bi <Action>(Build)
+nmap <Leader>e <Action>(ActivateProjectToolWindow)
+nmap <leader>f <Action>(Find)
+nmap <leader>r <Action>(Replace)
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+nmap <Leader>re <Action>(ReformatCode)
+nmap <Leader>w <Action>(CloseTab)
+nmap <Leader>a <Action>(ShowIntentionActions)
+
+nmap <S-l> <Action>(NextTab)
+nmap <S-h> <Action>(PreviousTab)
+nmap <S-r> <Action>(RenameElement)
+nmap <S-p> <Action>(FindInPath)
+nmap <S-f> <Action>(GotoFile)
+nmap <S-u> <Action>(GotoDeclaration)
+nmap <S-n> <Action>(NewFile)
