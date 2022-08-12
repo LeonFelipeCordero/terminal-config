@@ -22,6 +22,7 @@ nmap <leader>r <Action>(Replace)
 nmap <leader>b <Action>(ToggleLineBreakpoint)
 nmap <Leader>w <Action>(CloseContent)
 nmap <Leader>a <Action>(ShowIntentionActions)
+nmap <Leader>i <Action>(GotoImplementation)
 
 nmap <S-l> <Action>(NextTab)
 nmap <S-h> <Action>(PreviousTab)
