@@ -82,3 +82,8 @@ curl -s "https://get.sdkman.io" | bash
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 ```
 if not working add execulable in %HOME/.local/bin to PATH
+
+#### Jetbrains
+Many products from Jetbrans are my mine tool, I use ideaVim plugin for all of them, and my predifine keys maps are in .ideavimrc
+
+Copy .ideavimrc inside your user home directory `~/.ideavimrc`
