@@ -2,7 +2,6 @@ set visualbell
 set noerrorbells
 set scrolloff=5
 set incsearch
-set number relativenumber
 set idearefactormode=keep
 set ideajoin
 set surround
@@ -11,10 +10,6 @@ set NERDTree
 let mapleader=" "
 
 nmap <leader>ru <Action>(Run)
-nmap <leader>de <Action>(Debug)
-nmap <leader>st <Action>(Stop)
-nmap <leader>bi <Action>(Build)
-nmap <Leader>re <Action>(ReformatCode)
 nmap <Leader>co <Action>(CloseAllEditorsButActive)
 nmap <Leader>ha <Action>(HideActiveWindow)
 nmap <leader>br <Action>(ToggleLineBreakpoint)
@@ -24,6 +19,11 @@ nmap <leader>r <Action>(Replace)
 nmap <Leader>w <Action>(CloseContent)
 nmap <Leader>a <Action>(ShowIntentionActions)
 nmap <Leader>i <Action>(GotoImplementation)
+
+nmap <Leader>l <Action>(ReformatCode)
+nmap <leader>d <Action>(Debug)
+nmap <leader>s <Action>(Stop)
+nmap <leader>b <Action>(Build)
 
 nmap <S-l> <Action>(NextTab)
 nmap <S-h> <Action>(PreviousTab)
