@@ -10,15 +10,17 @@ set NERDTree
 let mapleader=" "
 
 nmap <leader>ru <Action>(Run)
-nmap <Leader>co <Action>(CloseAllEditorsButActive)
+nmap <Leader>q <Action>(CloseAllEditorsButActive)
 nmap <Leader>ha <Action>(HideActiveWindow)
 nmap <leader>br <Action>(ToggleLineBreakpoint)
 nmap <Leader>e <Action>(ActivateProjectToolWindow)
 nmap <leader>f <Action>(Find)
 nmap <leader>r <Action>(Replace)
-nmap <Leader>w <Action>(CloseContent)
+nmap <Leader>c <Action>(CloseContent)
 nmap <Leader>a <Action>(ShowIntentionActions)
 nmap <Leader>i <Action>(GotoImplementation)
+nmap <Leader>/ <Action>(CommentByLineComment)
+nmap <Leader>ee <Action>(SelectInProjectView)
 
 nmap <Leader>l <Action>(ReformatCode)
 nmap <leader>d <Action>(Debug)
