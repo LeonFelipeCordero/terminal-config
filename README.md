@@ -41,9 +41,10 @@ Copy the file .zsh in this repository to ~/.zshrc
 
 ## Tools
 #### Neovim
-Download latest version (no stable) from github and install with
+##### Linux
 ```bash
-sudo apt install my_download.deb
+sudo apt install snapd
+sudo snap --classic nvim
 ```
 
 #### Rust
@@ -87,3 +88,11 @@ if not working add execulable in %HOME/.local/bin to PATH
 Many products from Jetbrans are my mine tool, I use ideaVim plugin for all of them, and my predifine keys maps are in .ideavimrc
 
 Copy .ideavimrc inside your user home directory `~/.ideavimrc`
+
+#### Kitty
+Copy kitty.conf into ~/.config/kitty/kitty.conf
+```bash
+sudo apt install kitty
+cp kitty.conf ~/.config/kitty/
+```
+
