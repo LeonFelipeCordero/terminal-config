@@ -7,8 +7,9 @@ This repository contains basic configuration and instructions to create a fluent
 
 ## Setup
 ### Color Schema and Fonts
-1. Change the colors schema as you would like
-2. Download Nerd font (e.g. hacker), for linux make sure you Download a mono version.
+#### Linux
+1) Create a folder in ~/.local/shared/ called fonts
+2) Copy the content of fonts into the new created folder
 
 ### zsh and Oh My zsh and some plugins
 
@@ -22,7 +23,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 
 ```bash
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 ```
 
 ```bash
@@ -35,7 +36,7 @@ for linux
 chsh -s $(which zsh)
 ```
 
-`NOTE: for the plugins it may be you need to clone the repositories intro the plugins folder in ~/.oh-my-zsh`
+`NOTE: for the plugins it may be you need to clone the repositories into the plugins folder in ~/.oh-my-zsh`
 
 Copy the file .zsh in this repository to ~/.zshrc
 
@@ -70,7 +71,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 install later the version using nvm
 
 #### Golang
-1. Download latest version https://go.dev/doc/install
+Use gvm
+```bash
+sudo apt-get install busion
+bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+gvm install :version
+```
 2. Enable go in .zshrc file.
 
 ### SDKMAN
@@ -79,10 +85,19 @@ curl -s "https://get.sdkman.io" | bash
 ```
 
 #### LunarVim
-```bash
-bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+https://www.lunarvim.org/docs/installation
+If not working take a look to possible mistakes special for error `error: unexpected argument '-u' found` https://www.lunarvim.org/docs/troubleshooting
+copy the configuration into ~/.config/lvim/config.lua
+```lua
+lvim.colorscheme = "nordic"
+
+lvim.keys.normal_mode["<S-h>"] = ":bprevious<CR>"
+lvim.keys.normal_mode["<S-l>"] = ":bnext<CR>"
+
+lvim.plugins = {
+  {"AlexvZyl/nordic.nvim"}
+}
 ```
-if not working add execulable in %HOME/.local/bin to PATH
 
 #### Jetbrains
 Many products from Jetbrans are my mine tool, I use ideaVim plugin for all of them, and my predifine keys maps are in .ideavimrc
