@@ -40,3 +40,6 @@ nmap<Leader>so <Action>(StepOver)
 nmap<Leader>si <Action>(StepInto)
 nmap<Leader>rr <Action>(Rerun)
 nmap<Leader>res <Action>(Resume)
+
+# Manage projects
+nmap<Leader>pp <Action>(ManageRecentProjects)
