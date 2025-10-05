@@ -114,3 +114,16 @@ sudo apt install kitty
 cp kitty.conf ~/.config/kitty/
 ```
 
+#### Starship
+To style the terminal without the need of many things follow https://starship.rs/guide/
+
+
+#### Docker
+To instal docker take a look to the docs for docker-ce here https://docs.docker.com/engine/install/ubuntu/
+
+Usually when you freshly install it, the user will not get permissons, run the following to do it
+
+```sh
+sudo usermod -aG docker $USER
+newgrp docker
+```
