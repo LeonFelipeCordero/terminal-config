@@ -45,7 +45,7 @@ Copy the file .zsh in this repository to ~/.zshrc
 ##### Linux
 ```bash
 sudo apt install snapd
-sudo snap --classic nvim
+sudo snap install nvim --classic
 ```
 
 #### Rust
@@ -106,6 +106,9 @@ Copy .ideavimrc inside your user home directory `~/.ideavimrc`
 
 #### Kitty
 Copy kitty.conf into ~/.config/kitty/kitty.conf
+
+In kitty website you can find the instructions to make kitty available as a desktop app
+
 ```bash
 sudo apt install kitty
 cp kitty.conf ~/.config/kitty/
