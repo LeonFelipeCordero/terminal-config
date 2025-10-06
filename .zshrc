@@ -10,8 +10,6 @@ plugins=(
 	zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
-
 # SDK man
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
@@ -51,9 +49,9 @@ export PATH="$PATH:$HOME/workspace/projects/scripts"
 export VISUAL=lvim
 export EDITOR="$VISUAL"
 
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 #asdf
 . "$HOME/.asdf/asdf.sh"
