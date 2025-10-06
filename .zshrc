@@ -1,19 +1,13 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE='nerdfont-complete'
+source $ZSH/oh-my-zsh.sh
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir newline status)
-POWERLEVEL9K_STATUS_VERBOSE=true
-POWERLEVEL9K_STATUS_CROSS=true
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs)
-POWERLEVEL9K_SHOW_CHANGESET=true
+eval "$(starship init zsh)"
 
 plugins=(
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	asdf
 )
 
 source $ZSH/oh-my-zsh.sh
