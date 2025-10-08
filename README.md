@@ -116,3 +116,15 @@ Usually when you freshly install it, the user will not get permissons, run the f
 sudo usermod -aG docker $USER
 newgrp docker
 ```
+
+
+#### Intellij in tailing windows
+Sometimes intellij or JetBrains products have issues with tailing windows or some linux desktop environments such as COSMIC from PopOS. Adding this properties to the custom VM options could solve it
+Help -> Edit Custom VM Options
+```
+```
+-Dawt.toolkit.name=WLToolkit
+-Dsun.java2d.vulkan=true
+-Dsun.java2d.vulkan.accelsd=true
+```
+```
